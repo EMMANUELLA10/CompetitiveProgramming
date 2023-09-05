@@ -30,14 +30,14 @@ class Solution(object):
                 temp = temp.next
                 current2 = current2.next
 
-        while current1 is not None:
-                temp.next = current1
-                temp = temp.next
-                current1 = current1.next
+        if current1:
+            temp.next = current1
+            
+        
+        elif current2:
+            temp.next = current2
+            
 
-        while current2 is not None:
-                temp = current2
-                temp = temp.next
-                current2 = current2.next
 
         return mergedlist.next
+               
